@@ -89,7 +89,7 @@ def main():
 
     video = src.input_option(args.input)
 
-    dash = video.dash(Formats.hevc())
+    dash = video.dash(Formats.h264())
     dash.auto_generate_representations([720, 480])
 
     dash.output(args.output, monitor=monitor)

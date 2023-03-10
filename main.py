@@ -81,7 +81,7 @@ def main():
     parser.add_argument(
         "-o",
         "--output",
-        default=f"./out/{video_name.split('.')[0]}/{video_name}",
+        default=f"./out/{video_name.split('.')[0]}/{video_name}", # TODO : Add path to VM video source directory.
         help="The output to write files.",
     )
 

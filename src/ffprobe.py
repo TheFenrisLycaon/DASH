@@ -19,7 +19,7 @@ class FFProbe:
         commands = [cmd, "-show_format", "-show_streams", "-of", "json", filename]
         logging.info("ffprobe running command: {}".format(" ".join(commands)))
         process = subprocess.Popen(
-            commands, stdout=subprocess.PIPE, stderr=subprocess.PIPE
+            commands, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True
         )
         self.out, err = process.communicate()
         if process.returncode != 0:
